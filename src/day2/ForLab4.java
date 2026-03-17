@@ -4,8 +4,8 @@ public class ForLab4 {
 
 	public static void main(String[] args) {
 		int oneToTen = (int)(Math.random()*10) + 1;
-		int ThirtyToFourty = (int)(Math.random()*10) + 31;
-		
+		int ThirtyToFourty = (int)(Math.random()*11) + 30; // *10 + 31을 하면 31~40의 범위가 되므로 수정
+	
 		int sum = 0;
 		
 		for(int i = oneToTen; i <= ThirtyToFourty; i++) {
