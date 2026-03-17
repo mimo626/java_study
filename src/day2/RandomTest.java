@@ -11,9 +11,9 @@ public class RandomTest {
 		System.out.println((int)(rand*100));  
 		System.out.println((int)(rand*6));
 		
-		System.out.println((int)(rand*10)+1);   
-		System.out.println((int)(rand*100)+1);  
-		System.out.println((int)(rand*6)+1);   
-		System.out.println((int)(rand*45)+1);   
+		System.out.println((int)(rand*10)+1);   // 1~10
+		System.out.println((int)(rand*100)+1);  // 1~100
+		System.out.println((int)(rand*6)+1);   // 1~6
+		System.out.println((int)(rand*45)+1);   // 1~45
 	}
 }
