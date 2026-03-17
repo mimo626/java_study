@@ -1,0 +1,13 @@
+# 이클립스 설정 파일 (개인 설정마다 다르므로 제외)
+.metadata/
+.settings/
+.project
+.classpath
+
+# 컴파일된 결과물 (소스코드만 올리면 됩니다)
+bin/
+*.class
+
+# 기타 로그 및 임시 파일
+*.log
+.DS_Store (맥 사용자라면 필수)
