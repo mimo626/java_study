@@ -6,6 +6,10 @@ public class ArrayTest2 {
 		
 		for (int i=0; i < score.length; i++)
 			System.out.println(score[i]);
+		
+		for(int elem: score) {
+			System.out.println(elem);
+		}
 	
 		int[] score1 = new int[]{100, 200, 300, 400};		
 		System.out.println(score1);
