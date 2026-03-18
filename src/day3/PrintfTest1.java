@@ -1,4 +1,4 @@
-package day2;
+package day3;
 public class PrintfTest1 {
 	public static void main(String[] args) {
 		System.out.printf("테스트입니당%n");	// %n, \n 동일
