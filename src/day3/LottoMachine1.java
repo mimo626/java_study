@@ -8,11 +8,9 @@ public class LottoMachine1 {
 		
 		for(int i = 1; i < intArr.length; i++) {
 			int randomNum = (int)(Math.random()*45) + 1;
-			if(isExist[randomNum]) { 
-				while(isExist[randomNum]) {
-					randomNum = (int)(Math.random()*45) + 1;
-					if(!isExist[randomNum]) break;
-				}
+			while(isExist[randomNum]) {
+				randomNum = (int)(Math.random()*45) + 1;
+				if(!isExist[randomNum]) break;
 			}
 			isExist[randomNum] = true;
 			intArr[i] = randomNum;
