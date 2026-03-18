@@ -13,7 +13,7 @@ public class ContinueTest {
 				System.out.println('@');
 				continue; // 아래의 코드 수행은 무시하고 계속해서 다음 반복 처리로 넘어가라!
 			}
-			System.out.printf("%d(%c)", num, 96+num);				
+			System.out.printf("%d(%c) ", num, 96+num);				
 		}
 	}
 }
