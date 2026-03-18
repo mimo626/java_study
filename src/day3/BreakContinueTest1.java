@@ -4,7 +4,7 @@ public class BreakContinueTest1 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
 		int num;
-		int factNum;
+		long factNum;
 		while(true) {
 			System.out.print("양의 숫자를 입력하숑 : ");			
 			num = input.nextInt();
