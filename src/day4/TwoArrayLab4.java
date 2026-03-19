@@ -17,13 +17,24 @@ public class TwoArrayLab4 {
 //			}
 //			System.out.printf("%d행의 합은 %d입니다.\n", row+1, sum);
 //		}
-		int[] sums = new int[intArr.length];
-
-		for(int row = 0; row < intArr.length; row++) {
-			for(int col = 0; col < intArr[row].length; col++) {
-				sums[row] += intArr[row][col];
+		
+//		int[] sums = new int[intArr.length];
+//
+//		for(int row = 0; row < intArr.length; row++) {
+//			for(int col = 0; col < intArr[row].length; col++) {
+//				sums[row] += intArr[row][col];
+//			}
+//			System.out.printf("%d행의 합은 %d입니다.\n", row+1, sums[row]);
+//		}
+		
+		int rowNum = 1;
+		int num;
+		for(int[] row: intArr ) {
+			num = 0;
+			for(int elem:row) {
+				num += elem;
 			}
-			System.out.printf("%d행의 합은 %d입니다.\n", row+1, sums[row]);
+			System.out.printf("%d행의 합은 %d입니다.\n", rowNum++,num);
 		}
 
 	}
