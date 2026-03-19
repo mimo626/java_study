@@ -11,10 +11,12 @@ public class ArrayLab1 {
 		for(int i = 0; i < ary.length; i++) {
 			ary[i] = 10* (i+1);
 		}
+// 		반복하는 출력문을 한 줄로 바꿈
+//		System.out.println("첫 번째 : " +ary[0]);
+//		System.out.println("마지막 : " +ary[ary.length-1]);
+//		System.out.println("합 : " + (ary[0] +ary[ary.length-1]));
 		
-		System.out.println("첫 번째 : " +ary[0]);
-		System.out.println("마지막 : " +ary[ary.length-1]);
-		System.out.println("합 : " + (ary[0] +ary[ary.length-1]));
+		System.out.println("첫 번째 : " + ary[0] + "\n마지막 : " + ary[ary.length-1] + "\n합 : " + (ary[0] + ary[ary.length-1]));
 		
 		for(int i:ary) System.out.print(i + " ");
 		System.out.println();
