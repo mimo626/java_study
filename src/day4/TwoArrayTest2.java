@@ -6,7 +6,7 @@ public class TwoArrayTest2 {
 		char a2[] = {'가', '나', '다'};
 		double a3[] = new double[5];
 		System.out.println(a1.length + " : "+
-		            a2.length + " : " + a3.length); // 
+		            a2.length + " : " + a3.length); // 10 3 5
 		System.out.println(a1);		// 
 		System.out.println(a2);		// 
 		System.out.println(a3);		// 
