@@ -3,10 +3,13 @@ package day5;
 public class MethodLab6 {
 
 	public static void main(String[] args) {  
+		int[] multiNums = {2, 3, 4};
+		
 		System.out.println("[ 실행 결과 ]");
-		printArray(powerArray(2));
-		printArray(powerArray(3));
-		printArray(powerArray(4));
+		
+		for(int num : multiNums) {
+			printArray(powerArray(num));
+		}
 	}
 	
 	static int[] powerArray(int num) {
