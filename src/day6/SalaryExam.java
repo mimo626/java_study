@@ -13,6 +13,7 @@ class SalaryExpr{
 	}
 	
 // bonus에 값이 누적되고, 보너스가 월급의 기능을 하게 됨 
+// return을 반복하는 건 가독성에 좋지 않음 - 마지막에 1번!
 //	int getSalary(int grade){
 //		switch(grade) {
 //			case 1: bonus += 100; return bonus;
@@ -24,7 +25,7 @@ class SalaryExpr{
 	
 	// 지역변수를 생성해 bonus의 용도에 맞게 함수 구현! 
 	int getSalary(int grade){
-		// res를 초기화했기에 default문이 없어도 에러 나지 않
+		// res를 초기화했기에 default문이 없어도 에러 나지 않음
 		int res = 0;
 		switch(grade) {
 			case 1: res = bonus + 100; break;
@@ -53,10 +54,10 @@ public class SalaryExam {
 			salaryExpr = new SalaryExpr();
 		}
 		
+		// 1번만 결과를 이용한다면 굳이 변수로 선언하지 않아도 가능, bonus와 월급은 다른 기능을 해야 
 		// bonus = salaryExpr.getSalary(grade);
 		// resultResult = salaryExpr.getSalary(grade);
 		
-		// 1번만 결과를 이용한다면 굳이 변수로 선언하지 않아도 가능
 		System.out.printf("%d월 %d등급의 월급은 %d입니다.\n", month, grade, salaryExpr.getSalary(grade));
 	}
 
