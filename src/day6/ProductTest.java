@@ -1,4 +1,4 @@
-package day5;
+package day6;
 
 class Product{
 	String name;
@@ -48,7 +48,9 @@ public class ProductTest {
 		
 		for(int i = 0; i<products.length; i++) {
 			Product p = products[i];
-			System.out.printf("(%s %d  %,d원)\n", p.name, p.balance, p.price);
+			// 변수가 아닌 메서드로 값을 가져
+//			System.out.printf("(%s %d  %,d원)\n", p.name, p.balance, p.price);
+			System.out.printf("(%s %d  %,d원)\n", p.getName(), p.getBalance(), p.getPrice());
 		}
 		
 
