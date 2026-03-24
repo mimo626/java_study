@@ -24,10 +24,10 @@ class Point {
 class Point3D extends Point {
 	int z;
 	Point3D(int x, int y, int z) {
-		this.x = x;
-		this.y = y;
+		super(x, y);
 		this.z = z;
 	}
+
 	String getLocation() { // 오버라이딩
 		return super.getLocation() + ", z :" + z;
 	}
