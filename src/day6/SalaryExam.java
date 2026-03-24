@@ -1,5 +1,7 @@
 package day6;
 
+import day4.MethodLab4;
+
 class SalaryExpr{
 	int bonus;
 	
@@ -40,7 +42,7 @@ class SalaryExpr{
 public class SalaryExam {
 
 	public static void main(String[] args) {	
-		int month = (int)(Math.random()*12) + 1;
+		int month = MethodLab4.getRandom(1, 12);
 		int grade = (int)(Math.random()*4) + 1;
 		// int bonus;
 		int resultResult = 0;
