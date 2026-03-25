@@ -28,14 +28,14 @@ class SalaryExpr{
 	// 지역변수를 생성해 bonus의 용도에 맞게 함수 구현! 
 	int getSalary(int grade){
 		// res를 초기화했기에 default문이 없어도 에러 나지 않음
-		int res = 0;
+		int salary = 0;
 		switch(grade) {
-			case 1: res = bonus + 100; break;
-			case 2: res = bonus + 90; break;
-			case 3: res = bonus + 80; break;
-			case 4: res = bonus + 70; break;
+			case 1: salary = bonus + 100; break;
+			case 2: salary = bonus + 90; break;
+			case 3: salary = bonus + 80; break;
+			case 4: salary = bonus + 70; break;
 		}
-		return res;
+		return salary;
 	}
 }
 
@@ -45,7 +45,6 @@ public class SalaryExam {
 		int month = MethodLab4.getRandom(1, 12);
 		int grade = (int)(Math.random()*4) + 1;
 		// int bonus;
-		int resultResult = 0;
 		SalaryExpr salaryExpr;
 		
 		if(month % 2 == 0) {

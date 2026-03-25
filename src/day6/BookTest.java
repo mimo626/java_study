@@ -6,11 +6,8 @@ class Book{
 	int price;
 	
 	Book(){
-//		title = "자바의 정석";
-//		author = "남궁성";
-//		price = 40000;
+		//System.out.println(this.title);
 		this("자바의 정석", "남궁성", 36000);
-		System.out.println("1");
 	}
 	
 	Book(String title, String author, int price){
