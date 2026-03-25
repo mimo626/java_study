@@ -62,9 +62,10 @@ public class InterfaceTest1 {
 		//printOut(new Rectangle3()); // 컴파일 오류가 발생하는 행
 	}
 
-	static void printOut(Printable prt) {
+	static void printOut(Printable prt) { // Printable이니까 Circle3만 접근 
 		prt.setPage(100);
-		((Shape3)prt).setColor("파란색");
+		((Shape3)prt).setColor("파란색"); // Printable에서 다운 캐스팅해야 함 
+		((Circle3)prt).setColor("파란색");
 		if (prt.isAvailable())
 			prt.print(Printable.PRINT_TYPE2);
 	}
