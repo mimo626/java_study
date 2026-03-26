@@ -46,7 +46,7 @@ public interface InterfaceTest3 {
 		System.out.println("5 + 3 = " + cal.add(5, 3));
 		System.out.println("5 - 3 = " + cal.sub(5, 3));
 		System.out.println("5 * 3 = " + cal.mul(5, 3));
-		System.out.println("5 - 3 = " + ((Calculator)cal).div(5, 3));
+		System.out.println("5 / 3 = " + ((Calculator)cal).div(5, 3));
 		InterCalculator.print();		
 	}
 }

@@ -16,8 +16,8 @@ public class GenericTest {
 		System.out.println();
 
 		for (Object value : list) {
-			String s = (String) value;
-			System.out.println(s);
+			//String s = (String) value;
+			System.out.println(value.getClass());
 		}
 		System.out.println();
 
