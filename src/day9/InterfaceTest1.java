@@ -1,4 +1,4 @@
-package day8;
+package day9;
 
 interface Printable {
 	public static final int PRINT_TYPE1 = 1;

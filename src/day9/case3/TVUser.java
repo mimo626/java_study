@@ -1,7 +1,7 @@
-package day8.case3;
+package day9.case3;
 
 public class TVUser {
-	public static void main(String[] args) {		
+	public static void main(String[] args) {	
 		TV tv = TVFactory.getTV(args[0]);
 		if(tv != null) {
 			tv.powerOn();
