@@ -12,12 +12,14 @@ public class FileWriterTest {
 		if (!isDir.exists()) {
 			isDir.mkdir();
 		}
-		try {
-			writer = new FileWriter("c:/iotest/output.txt"); // overwrite
+	
+
+		try{
+			writer = new FileWriter("c:/iotest/output.txt"); // 자동으로 close 
 			char arr[] = { '객', '체', '지', '향', '언', '어', ' ',  'J', 'a', 'v', 'a' };
 			for (int cnt = 0; cnt < arr.length; cnt++)
 				writer.write(arr[cnt]);
-			writer.write("\n");
+			writer.write("\n"); // 타입 제한없음 
 			writer.write(arr);
 			writer.write("\n");
 			writer.write("OCJP 시험 대비");

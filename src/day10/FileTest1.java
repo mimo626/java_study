@@ -12,8 +12,8 @@ public class FileTest1 {
 		if (f.exists()) {
 			System.out.println(dirName + "명의 디렉토리가 존재합니다.");
 		} else {
-			if (f.mkdirs()) {
-				System.out.println(dirName + "명의 디렉토리가 생성되었습니다.");
+			if (f.mkdirs()) { //
+				System.out.println(dirName + "명의 디렉토리가 생성되었습니다."); 
 			} else {
 				System.out.println(dirName + "명의 디렉토리 생성에 실패했습니다.");
 			}

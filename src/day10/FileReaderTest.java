@@ -8,7 +8,7 @@ public class FileReaderTest {
 	public static void main(String args[]) {
 		FileReader reader = null;
 		try {
-			reader = new FileReader("c:/iotest/output.txt");
+			reader = new FileReader("/Users/kangminju/Desktop/output.txt");
 			while (true) {
 				int data = reader.read();
 				if (data == -1)
@@ -23,7 +23,7 @@ public class FileReaderTest {
 		} finally {
 			try {
 				if (reader != null)
-					reader.close();
+					reader.close(); 
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

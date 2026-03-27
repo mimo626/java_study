@@ -10,8 +10,8 @@ public class FileReaderTest2 {
 		FileReader reader = null;
 		BufferedReader br = null;
 		try {
-			reader = new FileReader("c:/iotest/output.txt");
-			br = new BufferedReader(reader);
+			reader = new FileReader("/Users/kangminju/Desktop/output.txt");
+			br = new BufferedReader(reader); // 읽을게 없으면 null
 			while (true) {
 				String data = br.readLine();
 				if (data == null)
@@ -25,8 +25,8 @@ public class FileReaderTest2 {
 		} finally {
 			try {
 				br.close();
-				reader.close();
-			} catch (Exception e) {
+				reader.close(); 
+			} catch (Exception e) { 
 				e.printStackTrace();
 			}
 		}

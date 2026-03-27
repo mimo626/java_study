@@ -10,18 +10,19 @@ import java.util.Locale;
 
 public class FileWriterTest3 {
 	public static void main(String[] args) {
-		String path = "C:/iotest";
+		String path = "/Users/kangminju/Desktop";
 		File dir = new File(path);
 		if (!dir.exists()) {
 			dir.mkdir();
 		}
-		try (FileWriter writer = new FileWriter("c:/iotest/today.txt", true);
+		try (FileWriter writer = new FileWriter("/Users/kangminju/Desktop/output.txt", true);
 				PrintWriter out = new PrintWriter(writer);) {
 			LocalDate ld = LocalDate.now();
 			int yearNum = ld.getYear();
 			int monthNum = ld.getMonthValue();
 			int dateNum = ld.getDayOfMonth();
 			DayOfWeek day = ld.getDayOfWeek();
+			// 한국어로 요일명을 저장 
 			String korday = day.getDisplayName(TextStyle.FULL, Locale.KOREAN);
 
 			out.printf("오늘은 %d년 %d월 %d일입니다.\r\n", yearNum, monthNum, dateNum);

@@ -12,7 +12,7 @@ public class FileReaderTest3 {
 			while (true) {
 				data = reader.read();
 				if (data == -1)
-					break;
+					break; 
 				System.out.print((char) data);
 			}
 		} catch (FileNotFoundException fnfe) {
