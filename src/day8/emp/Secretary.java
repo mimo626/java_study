@@ -1,4 +1,4 @@
-package emp;
+package day8.emp;
 
 public class Secretary extends Employee implements Bonus{
 	public Secretary(){}

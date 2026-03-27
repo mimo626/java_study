@@ -1,4 +1,4 @@
-package emp;
+package day8.emp;
 
 public abstract class Employee {
 	private String name;

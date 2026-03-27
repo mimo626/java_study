@@ -1,4 +1,4 @@
-package work;
+package day8.work;
 
 public class PlaneTest {
 	 public static void main(String args[]) {

@@ -1,4 +1,4 @@
-package work;
+package day8.work;
 
 abstract public class Plane {
 	private String planeName;

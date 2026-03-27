@@ -1,21 +1,21 @@
 package day10;
 public class StringTest {
 	public static void main(String[] args) {
-		System.out.println("1".length());    				//				
-		System.out.println("가나다".length()); 		//			
-		System.out.println("abc".charAt(1)); 			//	
-		System.out.println("abc".toUpperCase());	// 
+		System.out.println("1".length());    				//	1			
+		System.out.println("가나다".length()); 		//	3
+		System.out.println("abc".charAt(1)); 			//	b
+		System.out.println("abc".toUpperCase());	// ABC
 		
 		String str1 = "ABCDEFGHIJ";
 		String str2 = "abcdefgfhij";		
-		System.out.println(str1.substring(4));     	//		        
-		System.out.println(str1.substring(0, 3));  	//		
-		System.out.println(str2.indexOf("f"));       	//		  
-		System.out.println(str2.lastIndexOf("f"));   	//   
-		System.out.println(str2.replace('h', 'H')); 	//	
+		System.out.println(str1.substring(4));     	//	EFGHIJ
+		System.out.println(str1.substring(0, 3));  	//		ABC
+		System.out.println(str2.indexOf("f"));       	//		  5
+		System.out.println(str2.lastIndexOf("f"));   	//   7
+		System.out.println(str2.replace('h', 'H')); 	//	abcdefgfHij
 		
-		System.out.println("abc".repeat(5));			//
-		System.out.println("@".repeat(3));				//
+		System.out.println("abc".repeat(5));			// abcabcabcabcabc
+		System.out.println("@".repeat(3));				// @@@
 		
 		String str3 = "java jdbc html5 css javascript servlet jsp ajax";
 		String[] ary = str3.split(" ");   

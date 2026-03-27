@@ -1,4 +1,4 @@
-package work;
+package day8.work;
 
 public class AirPlane extends Plane{
 	AirPlane(){}

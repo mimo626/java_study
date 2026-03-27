@@ -1,4 +1,4 @@
-package mobile;
+package day7.mobile;
 
 public class Ltab extends Mobile{
 	public Ltab(){}

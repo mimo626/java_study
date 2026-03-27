@@ -1,4 +1,4 @@
-package emp;
+package day8.emp;
 
 public class Sales extends Employee implements Bonus {
 	public Sales(){}

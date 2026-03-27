@@ -1,4 +1,4 @@
-package mobile;
+package day7.mobile;
 
 abstract public class Mobile {
 	private String mobileName;
