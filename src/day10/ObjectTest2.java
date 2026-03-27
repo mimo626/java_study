@@ -1,6 +1,7 @@
 package day10;
 
 import java.util.HashSet;
+import java.util.Objects;
 class Member2 {
 	private int id;
 	private String name;
@@ -11,18 +12,23 @@ class Member2 {
 		this.name = name;
 		this.password = password;
 	}
-	
-	public boolean equals(Object o) {
-		if (this == o)
-			return true;
-		if (o != null && o instanceof Member2) {
-			Member2 m = (Member2) o;
-			if (id == m.id && name.equals(m.name) && password.equals(m.password))
-				return true;
-		}
-		return false;
-	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Member2 other = (Member2) obj;
+		return id == other.id && Objects.equals(name, other.name) && Objects.equals(password, other.password);
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, name, password);
+	}
 
 }
 public class ObjectTest2 {
@@ -37,7 +43,8 @@ public class ObjectTest2 {
 		System.out.println(obj1.equals(obj3));
 		HashSet<Member2> set = new HashSet<>();
 		System.out.println(set.add(obj1));
-		System.out.println(set.add(obj2));
+		// false여야 하지만 true -> 이유: equals만 오버라이딩하고 hashCode는 하지 않아
+		System.out.println(set.add(obj2)); 
 		System.out.println(set.add(obj3));
 	}
 }

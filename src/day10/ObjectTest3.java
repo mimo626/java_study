@@ -26,7 +26,8 @@ public class ObjectTest3 {
 		Member3 obj1 = new Member3(10, "자바", "duke");
 		Member3 obj2 = new Member3(10, "자바", "duke");
 		Member3 obj3 = new Member3(20, "자바", "duke");
-		System.out.println(obj1.hashCode());
+		// 오버라이딩 안했을 때 hashCode는 객체의 참조값이므로 다 다름 
+		System.out.println(obj1.hashCode()); 
 		System.out.println(obj2.hashCode());
 		System.out.println(obj3.hashCode());
 		HashSet<Member3> set = new HashSet<>();
