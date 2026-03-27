@@ -1,15 +1,24 @@
-package day9;
+package day10;
 import java.util.Random;
-
-public class ExceptionTest3_1 {
-	public static void main(String[] args) throws TestException {
+class TestException extends Exception {
+	 private static final long serialVersionUID = 1L;	 
+	TestException(String message){
+		super(message);
+	}
+}
+public class ExceptionTest3 {
+	public static void main(String[] args)  {
 		System.out.println("main()수행시작");
 		a();
 		System.out.println("main()수행종료");
 	}
-	static void a() throws TestException {
+	static void a()  {
 		System.out.println("a()수행시작");
-		b();		
+		try {
+			b();
+		} catch (TestException e){	
+			System.out.println("오류 발생 : "+e.getMessage());
+		}
 		System.out.println("a()수행종료");
 	}
 	static void b() throws TestException {

@@ -1,4 +1,4 @@
-package day9;
+package day10;
 public class StringTest {
 	public static void main(String[] args) {
 		System.out.println("1".length());    				//				
