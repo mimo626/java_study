@@ -1,7 +1,10 @@
 package day10;
 
 public class ExceptionTest1 {
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) throws InterruptedException{
+		System.out.println("수행시작");
+		Thread.sleep(10000);
+		System.out.println("수행종료");
+
 	}
 }

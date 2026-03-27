@@ -27,7 +27,7 @@ public class ProductTest {
 		while(iterator.hasNext()) {
 		    Product p = iterator.next();
 		    
-		    System.out.printf("%-10s %-20s %,d원\n", 
+		    System.out.printf("%s\t%-10s\t%,d원\n", 
 		                      p.getProductID(), 
 		                      p.getProductName(), 
 		                      p.getProductPrice());

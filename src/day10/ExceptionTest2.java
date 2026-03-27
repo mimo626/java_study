@@ -7,12 +7,13 @@ public class ExceptionTest2 {
 			int num2 = Integer.parseInt(args[1]);
 			int result = num1/num2;
 			System.out.println("연산 결과 : "+result);
-		} catch (ArrayIndexOutOfBoundsException e) {
+		} 
+		catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("프로그램 아규먼트를 2 개 전달하세요!!");
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
 			System.out.println("두번째 프로그램 아규먼트는 0이 아닌 값을 전달하세요!!");
-			return;
+			return; // 프로그램 수행 종료 -> finally는 수행 후 종료!
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 			System.out.println("프로그램 아규먼트로 숫자를 전달하세요!!");
