@@ -4,10 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Date;
 
 public class FileReaderTest2_1 {
 	public static void main(String args[]) {
-		try(FileReader reader = new FileReader("/Users/kangminju/Desktop/output.txt"); //첫 세미콜론은 필
+		try(
+				FileReader reader = new FileReader("/Users/kangminju/Desktop/output.txt"); //첫 세미콜론은 필
 			BufferedReader br = new BufferedReader(reader) //이때는 세미 콜론 선택
 				) {
 			while (true) {
