@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ScannerFromFile {
 	public static void main(String args[]) {
-		File f = new File("c:/iotest/output.txt");
+		File f = new File("/Users/kangminju/Desktop/output.txt");
 		try (Scanner scan = new Scanner(f);) {
 			if(new Random().nextBoolean()) { 
 				System.out.println("[ 행 단위 ]");
@@ -19,6 +19,7 @@ public class ScannerFromFile {
 					System.out.println(scan.next());		
 			}
 		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 			System.out.println("파일이 존재하지 않네요...ㅜ");
 		}					
 	}

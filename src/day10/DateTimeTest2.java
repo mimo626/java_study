@@ -34,7 +34,7 @@ public class DateTimeTest2 {
 		
 		System.out.printf("%tY년 %1$tm월 %1$td일\n", LocalDate.now());
 		System.out.printf("%tY년 %1$tm월 %1$td일 %1$tH시 %1$tM분 %1$tS초\n", LocalDateTime.now());
-		//System.out.printf("%tY년 %1$tm월 %1$td일 %1$tH시 %1$tM분 %1$tS초\n", LocalDate.now());
+		System.out.printf("%tY년 %1$tm월 %1$td일 %1$tH시 %1$tM분 %1$tS초\n", LocalDate.now());
 	}
 }
 
