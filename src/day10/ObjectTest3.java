@@ -1,7 +1,6 @@
 package day10;
 
 import java.util.HashSet;
-import java.util.Objects;
 
 class Member3 {
 	private int id;
@@ -30,7 +29,7 @@ public class ObjectTest3 {
 		System.out.println(obj1.hashCode()); 
 		System.out.println(obj2.hashCode());
 		System.out.println(obj3.hashCode());
-		HashSet<Member3> set = new HashSet<>();
+		HashSet <Member3> set = new HashSet<>();
 		System.out.println(set.add(obj1));
 		System.out.println(set.add(obj2));
 		System.out.println(set.add(obj3));
