@@ -11,7 +11,7 @@ public class Name {
     }
 	@Override
 	public int hashCode() {
-		return Objects.hash(firstName, lastName); // 가변형 인자 
+		return Objects.hash(firstName, lastName);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -23,6 +23,6 @@ public class Name {
 			return false;
 		Name other = (Name) obj;
 		return Objects.equals(firstName, other.firstName) && Objects.equals(lastName, other.lastName);
-	}
+	}    
     
 }
