@@ -2,6 +2,7 @@ package jdbcexam;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -16,14 +17,22 @@ public class InsertData1 {
 			conn = DriverManager.getConnection(url, user, passwd);	
 			System.out.println("데이터베이스에 접속했습니다.");
 			stmt = conn.createStatement();		
-			stmt.executeUpdate("insert into student values ('둘리', 100)");
-			stmt.executeUpdate("insert into student values ('또치', 90)");
-			stmt.executeUpdate("insert into student values ('도우너', 95)");
-			stmt.executeUpdate("insert into student values ('희동이', 80)");
-			stmt.executeUpdate("insert into student values ('마이콜', 85)");
-			stmt.executeUpdate("insert into student values ('고길동', 60)");
-			stmt.executeUpdate("insert into student values ('짱구', 90)");
-			stmt.executeUpdate("insert into student values ('짱아', 75)");
+//			stmt.executeUpdate("insert into student values ('둘리', 100)");
+//			stmt.executeUpdate("insert into student values ('또치', 90)");
+//			stmt.executeUpdate("insert into student values ('도우너', 95)");
+//			stmt.executeUpdate("insert into student values ('희동이', 80)");
+//			stmt.executeUpdate("insert into student values ('마이콜', 85)");
+//			stmt.executeUpdate("insert into student values ('고길동', 60)");
+//			stmt.executeUpdate("insert into student values ('짱구', 90)");
+//			stmt.executeUpdate("insert into student values ('짱아', 75)");
+			String name = "꾸";
+			int age = 12;
+			stmt.executeUpdate("insert into student values ('" + name + "', " + age + ")");
+			PreparedStatement pstmt = conn.prepareStatement("insert into student values(?, ?)");
+			pstmt.setString(1,  name);
+			pstmt.setString(2,  name);
+			pstmt.executeUpdate();
+			
 			System.out.println("student 테이블에 데이터 삽입 완료");						
 		} catch (SQLException se1) {
 			System.out.println(se1.getMessage());
