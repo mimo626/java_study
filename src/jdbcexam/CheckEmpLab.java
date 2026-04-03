@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class CheckEmpLab {
 
 	public static void main(String[] args) {
+
 		String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
 		String user = "jdbctest";
 		String passwd = "jdbctest";
