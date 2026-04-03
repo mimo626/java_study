@@ -10,6 +10,8 @@ public class VisitorList {
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url,user,passwd);
 		Statement stmt = conn.createStatement();
+		// 모든 열을 꺼낼 때는 *보다 컬럼명 일일히 명시해서 가독성과 속도를 높여야 함 
+		// *는 간단히 테스트할 때만 사용 
 		String sql = "SELECT id, name, writedate, memo FROM visitor";
 		ResultSet rs = stmt.executeQuery(sql);		
 		while(rs.next()) {
