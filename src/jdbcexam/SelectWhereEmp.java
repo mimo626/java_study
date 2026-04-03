@@ -11,8 +11,11 @@ public class SelectWhereEmp {
 		String user = "jdbctest";
 		String passwd = "jdbctest";
 		Connection conn = DriverManager.getConnection(url, user, passwd);
+		System.out.println("conn: " + conn.getClass().getName());
 		Statement stmt = conn.createStatement();
+		System.out.println("stmt: " + conn.getClass().getName());
 		ResultSet rs = stmt.executeQuery("SELECT ename, sal, comm FROM emp WHERE comm is not null");
+		System.out.println("rs: " + rs.getClass().getName());
 		System.out.printf("%8s%8s%8s\n", "성명", "급여", "커미션");
 		System.out.println("  -----------------------------------");
 		while (rs.next()) {
