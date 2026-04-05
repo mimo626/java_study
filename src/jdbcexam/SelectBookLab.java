@@ -54,6 +54,7 @@ public class SelectBookLab {
 					if(rs.next()) {
 						// 번호가 1~2번이면 true, 그 외에는 false 
 						//boolean isAllPrint = (selectNum == 1 || selectNum == 2);
+						//printSelectBook(rs, isAllPrint);
 						printDynamicBook(rs);
 					} else {
 						System.out.println("조회되는 내용이 없습니다.");
