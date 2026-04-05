@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,8 +53,8 @@ public class SelectBookLab {
 					
 					if(rs.next()) {
 						// 번호가 1~2번이면 true, 그 외에는 false 
-						boolean isAllPrint = (selectNum == 1 || selectNum == 2);
-						printSelectBook(rs, isAllPrint);
+						//boolean isAllPrint = (selectNum == 1 || selectNum == 2);
+						printDynamicBook(rs);
 					} else {
 						System.out.println("조회되는 내용이 없습니다.");
 					}
@@ -95,5 +96,30 @@ public class SelectBookLab {
 							rs.getString("title"),
 							rs.getString("resultPrice")));
 		} while (rs.next());
+	}
+	
+	private static void printDynamicBook(ResultSet rs) throws SQLException {
+	    // 1. 메타데이터 객체 가져오기
+	    ResultSetMetaData rsmd = rs.getMetaData();
+	    
+	    // 2. 조회된 컬럼이 총 몇 개인지 파악 (예: 1번 메뉴는 4개, 3번 메뉴는 2개)
+	    int columnCount = rsmd.getColumnCount();
+	    
+	    // 3. 동적으로 헤더(컬럼명) 출력하기
+	    System.out.println("-------------------------------------------------");
+	    for (int i = 1; i <= columnCount; i++) {
+	        // DB에서 컬럼 이름을 직접 가져와서 출력
+	        System.out.print(rsmd.getColumnName(i) + "\t\t"); 
+	    }
+	    System.out.println("\n-------------------------------------------------");
+	    
+	    // 4. 동적으로 실제 데이터 출력하기
+	    while (rs.next()) {
+	        for (int i = 1; i <= columnCount; i++) {
+	            // 컬럼 개수만큼 반복하며 데이터 꺼내기 (타입 상관없이 String으로 가져옴)
+	            System.out.print(rs.getString(i) + "\t\t");
+	        }
+	        System.out.println(); // 한 행(Row) 출력이 끝나면 줄바꿈
+	    }
 	}
 }
