@@ -1,4 +1,4 @@
-package jdbcexam;
+ package jdbcexam;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,7 +24,7 @@ public class SelectImage {
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
 				String imgName[] = rs.getString("filename").split("\\.");	
-				File imgFile = new File("c:/Temp/"+imgName[0]+new Date().getTime()+"."+imgName[1]);
+				File imgFile = new File("/Users/kangminju/Documents/itcenedu/java/iotest/Temp/"+imgName[0]+new Date().getTime()+"."+imgName[1]);
 				InputStream is = rs.getBinaryStream("imgcontent");
 				FileOutputStream fos = new FileOutputStream(imgFile);
 				byte[] b = new byte[2048];
