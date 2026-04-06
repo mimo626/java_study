@@ -48,6 +48,7 @@ public class SelectBookLab {
 				}
 				
 				// PreparedStatement 사용 및 ResultSet 자원 해제
+				// 반복문에서 PreparedStatement를 계속 생성해야 함 -> Statement를 쓰는 것도 방법
 				try ( PreparedStatement pstmt = conn.prepareStatement(sqlMap.get(selectNum));
 					  ResultSet rs = pstmt.executeQuery() ) {
 					
