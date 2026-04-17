@@ -1,27 +1,5 @@
 package day6;
 
-class Book{
-	String title;
-	String author;
-	int price;
-	
-	Book(){
-		//System.out.println(this.title);
-		this("자바의 정석", "남궁성", 36000);
-	}
-	
-	Book(String title, String author, int price){
-		this.title = title;
-		this.author = author;
-		this.price = price;
-		System.out.println("2");
-
-	}
-	
-	String getBookInfo() {
-		return title + " " + author + " " + price;
-	}
-}
 public class BookTest {
 
 	public static void main(String[] args) {
